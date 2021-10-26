@@ -95,6 +95,7 @@
     background: #fff;
     line-height: 50px;
     text-align: center;
+    font-family: 'Lato', sans-serif;
     font-size: 35px;
     left: 50%;
     transform: translateX(-50%);
@@ -148,7 +149,10 @@
 
 .font-info p {
     color: #fff;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .font-get {
