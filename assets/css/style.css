@@ -65,9 +65,15 @@
     margin: 0 7px;
 }
 
-.menu ul li button {
+.menu ul li button, 
+.menu ul li select {
     cursor: pointer;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #e5e7eb;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 /* font area */

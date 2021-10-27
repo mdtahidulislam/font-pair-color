@@ -1,4 +1,4 @@
-const font = [
+const fonts = [
     {
         hfont: 'Roboto Condensed',
         tfont: 'lato'
@@ -29,27 +29,47 @@ let i = 0;
 
 // next btn event
 nextBtn.addEventListener('click', () => {
-    if (i >= font.length - 1) {
+    if (i >= fonts.length - 1) {
         i = -1;
     }
     i++;
-    addFont();
+    addFont(i);
 })
 
 prevBtn.addEventListener('click', () => {
     console.log(i);
     if (i <= 0) {
-        i = font.length;
+        i = fonts.length;
     }
     i--;
     console.log(i);
-    addFont();
+    addFont(i);
 })
 
-const addFont = () => {
+// dropdown option
+const selectFont = document.getElementById('select-font');
+const fragment = document.createDocumentFragment();
+
+fonts.forEach((font, index) => {
+    const optionElement = document.createElement('option');
+    optionElement.innerHTML = `${font.hfont} + ${font.tfont}`
+    optionElement.value = `${index}`;
+    fragment.appendChild(optionElement);
+});
+
+selectFont.appendChild(fragment);
+
+selectFont.addEventListener('change', () => {
+    let selectedIndex = Number(selectFont.value);
+    console.log(selectFont.selectedIndex);
+    addFont(selectedIndex);
+})
+
+
+const addFont = (i) => {
     slideNumber.innerText = i + 1;
-    const hfont = font[i].hfont;
-    const tfont = font[i].tfont;
+    const hfont = fonts[i].hfont;
+    const tfont = fonts[i].tfont;
 
     hFont.style.fontFamily = `'${hfont}',sans-serif`;
     tFont.style.fontFamily = `'${tfont}',sans-serif`;
@@ -57,5 +77,4 @@ const addFont = () => {
     hFontName.innerText = hfont;
     tFontName.innerText = tfont;
 }
-
 
