@@ -1,15 +1,119 @@
 const fonts = [
     {
-        hfont: 'Roboto Condensed',
-        tfont: 'lato'
+        hfont: 'Abril Fatface',
+        tfont: 'Lato'
     },
     {
-        hfont: 'Times New Roman',
-        tfont: 'lato'
+        hfont: 'Alegreya',
+        tfont: 'Alegreya Sans'
     },
     {
-        hfont: 'lato',
-        tfont: 'Roboto Condensed'
+        hfont: 'Archivo',
+        tfont: 'Roboto'
+    },
+    {
+        hfont: 'Bebas Neue',
+        tfont: 'Old Standard TT'
+    },
+    {
+        hfont: 'Cooper Hewitt',
+        tfont: 'Cooper Hewitt'
+    },
+    {
+        hfont: 'Exo2',
+        tfont: 'Alegreya Sans'
+    },
+    {
+        hfont: 'Fira Sans',
+        tfont: 'PT Serif'
+    },
+    {
+        hfont: 'Josefin Sans',
+        tfont: 'Josefin Slab'
+    },
+    {
+        hfont: 'Karla',
+        tfont: 'Spectral'
+    },
+    {
+        hfont: 'Lato',
+        tfont: 'Merriweather'
+    },
+    {
+        hfont: 'Lato',
+        tfont: 'Roboto'
+    },
+    {
+        hfont: 'League Gothic',
+        tfont: 'PT Serif'
+    },
+    {
+        hfont: 'League Spartan',
+        tfont: 'Libre Baskerville'
+    },
+    {
+        hfont: 'Libre Baskerville',
+        tfont: 'Source Sans Pro'
+    },
+    {
+        hfont: 'Libre Franklin',
+        tfont: 'Libre Baskerville'
+    },
+    {
+        hfont: 'Lobster',
+        tfont: 'Roboto'
+    },
+    {
+        hfont: 'Lora',
+        tfont: 'Merriweather'
+    },
+    {
+        hfont: 'Merriweather Sans',
+        tfont: 'Merriweather'
+    },
+    {
+        hfont: 'Montserrat',
+        tfont: 'Merriweather'
+    },
+    {
+        hfont: 'Montserrat',
+        tfont: 'Droid Serif'
+    },
+    {
+        hfont: 'Nexa',
+        tfont: 'Crimson Pro'
+    },
+    {
+        hfont: 'Noir',
+        tfont: 'Playfair Display'
+    },
+    {
+        hfont: 'Open Sans',
+        tfont: 'Source Sans Pro'
+    },
+    {
+        hfont: 'Oswald',
+        tfont: 'Montserrat'
+    },
+    {
+        hfont: 'Oswald',
+        tfont: 'Old Standard TT'
+    },
+    {
+        hfont: 'Playfair Display',
+        tfont: 'Raleway'
+    },
+    {
+        hfont: 'PT Sans',
+        tfont: 'PT Serif'
+    },
+    {
+        hfont: 'Raleway',
+        tfont: 'Merriweather'
+    },
+    {
+        hfont: 'Source Sans Pro',
+        tfont: 'Times New Roman'
     }
 ]
 
