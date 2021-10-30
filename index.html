@@ -45,7 +45,33 @@
     </div>
 
 
-    <!-- js -->
-    <script src="./assets/js/main.js"></script>
+ <!-- js -->
+ <script src="./assets/js/main.js"></script>
+ <!-- fetch api -->
+ <script>
+     const API_KEY = 'AIzaSyAV5-rBFPIkyTkVTi1dsUg3pRj5wOHAF9E';
+     fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=${API_KEY}`)
+     .then(res => res.json())
+     .then(data => {
+         console.log(data.items);
+         console.log(data.items[0].family);
+         const items = data.items;
+         items.forEach(item => {
+             console.log(item.family);
+         });
+     })
+ </script>
+ <!-- typekit webfont -->
+ <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+WebFont.load({
+ google: {
+   families: ['Lato', 'Roboto', 'Roboto Condensed']
+ }
+});
+</script>
+
+<!--  -->
+
 </body>
 </html>
