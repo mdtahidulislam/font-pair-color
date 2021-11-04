@@ -154,23 +154,27 @@ prevBtn.addEventListener('click', () => {
 const selectFont = document.getElementById('select-font');
 const fragment = document.createDocumentFragment();
 
-fonts.forEach((font, index) => {
-    const optionElement = document.createElement('option');
-    optionElement.innerHTML = `${font.hfont} + ${font.tfont}`
-    optionElement.value = `${index}`;
-    fragment.appendChild(optionElement);
-});
+// fonts.forEach((font, index) => {
+//     const optionElement = document.createElement('option');
+//     optionElement.innerHTML = `${font.hfont} + ${font.tfont}`
+//     optionElement.value = `${index}`;
+//     fragment.appendChild(optionElement);
+// });
 
-selectFont.appendChild(fragment);
+// selectFont.appendChild(fragment);
 
 selectFont.addEventListener('change', () => {
     let selectedIndex = Number(selectFont.value);
-    console.log(selectFont.selectedIndex);
-    addFont(selectedIndex);
+    // console.log(selectFont.selectedIndex);
+    // addFont(selectedIndex);
+
+    const selectdFont = selectFont.options[selectFont.selectedIndex].text;
+    console.log(selectdFont);
+    hFont.style.fontFamily = `'${selectdFont}',sans-serif`;
 })
 
 
-const addFont = (i) => {
+const addFont = (i, value) => {
     slideNumber.innerText = i + 1;
     const hfont = fonts[i].hfont;
     const tfont = fonts[i].tfont;
@@ -182,3 +186,37 @@ const addFont = (i) => {
     tFontName.innerText = tfont;
 }
 
+
+// GOOGLE FONTS
+const API_KEY = 'AIzaSyAV5-rBFPIkyTkVTi1dsUg3pRj5wOHAF9E';
+fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=${API_KEY}`)
+.then(res => res.json())
+.then(data => {
+    const fonts = data.items;
+    
+    fonts.forEach(font => {
+
+       allGoogleFonts(font);
+       
+       // load font
+       // WebFont.load({
+       //     google: {
+       //         families: [family]
+       //     }
+       // });  
+    });
+})
+
+const allGoogleFonts = (font) => {
+   //const allFonts = [];
+   const family = font.family;
+//    console.log(family);
+   //allFonts.push(family);
+   
+
+   const optionElement = document.createElement('option');
+    optionElement.innerHTML = family;
+    optionElement.value = family;
+    fragment.appendChild(optionElement);
+    selectFont.appendChild(fragment);
+}
