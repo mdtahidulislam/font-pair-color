@@ -150,8 +150,12 @@ prevBtn.addEventListener('click', () => {
     addFont(i);
 })
 
+
+
+
 // dropdown option
-const selectFont = document.getElementById('select-font');
+const selectHeadingFont = document.getElementById('select-heading-font');
+const selectTextFont = document.getElementById('select-text-font');
 const fragment = document.createDocumentFragment();
 
 // fonts.forEach((font, index) => {
@@ -163,17 +167,57 @@ const fragment = document.createDocumentFragment();
 
 // selectFont.appendChild(fragment);
 
-selectFont.addEventListener('change', () => {
-    let selectedIndex = Number(selectFont.value);
-    // console.log(selectFont.selectedIndex);
-    // addFont(selectedIndex);
+// GET ALL GOOGLE FONTS
+const API_KEY = 'AIzaSyAV5-rBFPIkyTkVTi1dsUg3pRj5wOHAF9E';
+fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=${API_KEY}`)
+    .then(res => res.json())
+    .then(data => {
+        const fonts = data.items;
 
-    const selectdFont = selectFont.options[selectFont.selectedIndex].text;
-    console.log(selectdFont);
-    hFont.style.fontFamily = `'${selectdFont}',sans-serif`;
-})
+        fonts.forEach(font => {
+
+            // DROPDOWN OPTION FOR HEADING
+            allGoogleFonts(font, 'select-heading-font');
+            // DROPDOWN OPTION FOR TEXT
+            allGoogleFonts(font, 'select-text-font');
+
+            // load font
+            // WebFont.load({
+            //     google: {
+            //         families: [family]
+            //     }
+            // });  
+        });
+    })
+
+// MAKE DROPDOWN OPTION WITH ALL GOOGLE FONTS
+const allGoogleFonts = (font, elementId) => {
+    //const allFonts = [];
+    const family = font.family;
+    //    console.log(family);
+    //allFonts.push(family);
+
+    const optionElement = document.createElement('option');
+    optionElement.innerHTML = family;
+    optionElement.value = family;
+    fragment.appendChild(optionElement);
+    document.getElementById(elementId).appendChild(fragment);
+}
+
+// SELECT FONT FOR HEADING & TEXT
+const selectFont = (elementId) => {
+    const selectedElement = document.getElementById(elementId);
+    const selectedFont = selectedElement.options[selectedElement.selectedIndex].text;
+    if (elementId === 'select-heading-font') {
+        hFont.style.fontFamily = `'${selectedFont}',sans-serif`;
+    }
+    if (elementId === 'select-text-font') {
+        tFont.style.fontFamily = `'${selectedFont}',sans-serif`;
+    }
+}
 
 
+// ADD FONT
 const addFont = (i, value) => {
     slideNumber.innerText = i + 1;
     const hfont = fonts[i].hfont;
@@ -187,36 +231,3 @@ const addFont = (i, value) => {
 }
 
 
-// GOOGLE FONTS
-const API_KEY = 'AIzaSyAV5-rBFPIkyTkVTi1dsUg3pRj5wOHAF9E';
-fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=${API_KEY}`)
-.then(res => res.json())
-.then(data => {
-    const fonts = data.items;
-    
-    fonts.forEach(font => {
-
-       allGoogleFonts(font);
-       
-       // load font
-       // WebFont.load({
-       //     google: {
-       //         families: [family]
-       //     }
-       // });  
-    });
-})
-
-const allGoogleFonts = (font) => {
-   //const allFonts = [];
-   const family = font.family;
-//    console.log(family);
-   //allFonts.push(family);
-   
-
-   const optionElement = document.createElement('option');
-    optionElement.innerHTML = family;
-    optionElement.value = family;
-    fragment.appendChild(optionElement);
-    selectFont.appendChild(fragment);
-}
