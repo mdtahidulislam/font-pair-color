@@ -10,13 +10,10 @@ const hFontName = document.querySelector('.heading-font');
 const tFontName = document.querySelector('.text-font');
 
 // GET FONTS PAIR
-fonts = [];
-
+const fonts = [];
 fetch('../../fontsPair.json')
     .then(res => res.json())
-    .then(data => fonts.push(data))
-
-console.log(fonts);
+    .then(data => fonts.push(...data))
 // init counter
 let i = 0;
 
@@ -99,9 +96,11 @@ const selectFont = (elementId) => {
     const selectedFont = selectedElement.options[selectedElement.selectedIndex].text;
     if (elementId === 'select-heading-font') {
         hFont.style.fontFamily = `'${selectedFont}',sans-serif`;
+        hFontName.innerText = selectedFont;
     }
     if (elementId === 'select-text-font') {
         tFont.style.fontFamily = `'${selectedFont}',sans-serif`;
+        tFontName.innerText = selectedFont;
     }
 }
 
