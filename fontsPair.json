@@ -16,8 +16,8 @@
         "tfont": "Old Standard TT"
     },
     {
-        "hfont": "Cooper Hewitt",
-        "tfont": "Cooper Hewitt"
+        "hfont": "Playfair Display",
+        "tfont": "Source Sans Pro"
     },
     {
         "hfont": "Exo2",
@@ -44,12 +44,12 @@
         "tfont": "Roboto"
     },
     {
-        "hfont": "League Gothic",
-        "tfont": "PT Serif"
+        "hfont": "Quattrocento",
+        "tfont": "Quattrocento Sans"
     },
     {
-        "hfont": "League Spartan",
-        "tfont": "Libre Baskerville"
+        "hfont": "Oswald",
+        "tfont": "Quattrocento"
     },
     {
         "hfont": "Libre Baskerville",
@@ -114,5 +114,89 @@
     {
         "hfont": "Source Sans Pro",
         "tfont": "Times New Roman"
+    },
+    {
+        "hfont": "Sacramento",
+        "tfont": "Alice"
+    },
+    {
+        "hfont": "Halant",
+        "tfont": "Nunito Sans"
+    },
+    {
+        "hfont": "Ubuntu",
+        "tfont": "Open Sans"
+    },
+    {
+        "hfont": "Unica One",
+        "tfont": "Crimson Text"
+    },
+    {
+        "hfont": "Philosopher",
+        "tfont": "Muli"
+    },
+    {
+        "hfont": "Source Sans Pro",
+        "tfont": "Source Serif Pro"
+    },
+    {
+        "hfont": "Fjalla One",
+        "tfont": "Cantarell"
+    },
+    {
+        "hfont": "Work Sans",
+        "tfont": "Open Sans"
+    },
+    {
+        "hfont": "Hind",
+        "tfont": "Open Sans"
+    },
+    {
+        "hfont": "Oxygen",
+        "tfont": "Source Sans Pro"
+    },
+    {
+        "hfont": "Fjalla One",
+        "tfont": "Libre Baskerville"
+    },
+    {
+        "hfont": "Lustria",
+        "tfont": "Lato"
+    },
+    {
+        "hfont": "Cormorant Garamond",
+        "tfont": "Proza Libre"
+    },
+    {
+        "hfont": "Cinzel",
+        "tfont": "Fauna One"
+    },
+    {
+        "hfont": "Yeseva One",
+        "tfont": "Josefin Sans"
+    },
+    {
+        "hfont": "Cardo",
+        "tfont": "Josefin Sans"
+    },
+    {
+        "hfont": "Roboto",
+        "tfont": "Nunito"
+    },
+    {
+        "hfont": "Quicksand",
+        "tfont": "Quicksand"
+    },
+    {
+        "hfont": "Montserrat",
+        "tfont": "Hind"
+    },
+    {
+        "hfont": "Dancing Script",
+        "tfont": "Josefin Sans"
+    },
+    {
+        "hfont": "Corben",
+        "tfont": "Nobile"
     }
 ]
