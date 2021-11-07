@@ -4,6 +4,23 @@
     outline: none;
 }
 
+body {
+    font-family: 'poppins', sans-serif;
+}
+
+/* utility css */
+.d-flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
 /* common css */
 .wrapper {
     max-width: 1170px;
@@ -177,4 +194,14 @@
 
 .menu ul li {
     margin: 10px;
+}
+
+.select-color {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #e5e7eb;
+    font-size: 16px;
+    font-weight: 600;
 }

@@ -30,6 +30,22 @@
                                 <option value="">Select Text Font</option>
                             </select>
                         </li>
+                        <li class="d-flex space-between items-center select-color">
+                            <p>Heading Color</p>
+                            <input type="color" id="heading-color" onchange="selectColor('heading-color')">
+                        </li>
+                        <li class="d-flex space-between items-center select-color">
+                            <p>Text Color</p>
+                            <input type="color" id="text-color" onchange="selectColor('text-color')">
+                        </li>
+                        <li class="d-flex space-between items-center select-color">
+                            <p>Background Color</p>
+                            <input type="color" id="bg-color" onchange="selectColor('bg-color')">
+                        </li>
+                        <li class="d-flex space-between items-center select-color">
+                            <p>Button Color</p>
+                            <input type="color" id="btn-color" onchange="selectColor('btn-color')">
+                        </li>
                     </ul>
                 </nav>
             </aside>
@@ -45,8 +61,8 @@
                         <p><span class="heading-font">Abril Fatface</span> + <span class="text-font">Lato</span></p>
                     </div>
                     <div class="font-get">
-                        <button class="download">Download Font Pair</button>
-                        <button class="copy-code">Copy the code</button>
+                        <button class="download btn-bg">Download Font Pair</button>
+                        <button class="copy-code btn-bg">Copy the code</button>
                     </div>
                 </div>
             </main>

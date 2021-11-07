@@ -9,6 +9,10 @@ const tFont = document.querySelector('.t-font');
 const hFontName = document.querySelector('.heading-font');
 const tFontName = document.querySelector('.text-font');
 
+const contentBox = document.querySelector('.content-box');
+
+const fontDownCopyBtn = document.querySelectorAll('.btn-bg')
+
 // GET FONTS PAIR
 const fonts = [];
 fetch('../../fontsPair.json')
@@ -119,4 +123,19 @@ const addFont = (i, value) => {
     tFontName.innerText = tfont;
 }
 
+
+// change color
+const selectColor = (id) => {
+    console.log('clicked');
+    const color = document.getElementById(id).value;
+    if (id === 'heading-color') {
+        hFont.style.color = color;
+    } else if (id === 'text-color') {
+        tFont.style.color = color;
+    } else if (id === 'bg-color') {
+        contentBox.style.backgroundColor = color;
+    } else if (id === 'btn-color') {
+        fontDownCopyBtn.forEach(btn => btn.style.backgroundColor = color)
+    }
+}
 
