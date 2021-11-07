@@ -66,6 +66,14 @@ body {
     font-weight: 600;
 }
 
+.menu ul li button {
+    width: 49%;
+}
+
+.menu ul li select {
+    width: 100%;
+}
+
 /* font area */
 
 .font-area-bg {
@@ -188,6 +196,11 @@ body {
 }
 
 /* sidebar */
+.sidebar .menu {
+    height: 100%;
+    overflow-y: scroll;
+}
+
 .menu ul {
     list-style: none;
 }
@@ -204,4 +217,13 @@ body {
     background: #e5e7eb;
     font-size: 16px;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        display: inherit;
+    }
+    .sidebar {
+        margin-bottom: 80px;
+    }
 }
