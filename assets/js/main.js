@@ -15,7 +15,7 @@ const fontDownCopyBtn = document.querySelectorAll('.btn-bg')
 
 // GET FONTS PAIR
 const fonts = [];
-fetch('../../fontsPair.json')
+fetch('./fontsPair.json')
     .then(res => res.json())
     .then(data => fonts.push(...data))
 // init counter
