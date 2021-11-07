@@ -27,16 +27,16 @@
     border-bottom: 2px solid #fff;
 }
 
-.menu ul {
+/* .menu ul {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.menu ul li {
+/* .menu ul li {
     margin: 0 7px;
-}
+} */
 
 .menu ul li button, 
 .menu ul li select {
@@ -148,4 +148,33 @@
     font-size: 16px;
     cursor: pointer;
     margin-bottom: 10px;
+}
+
+
+
+/* new page css */
+/* layout css */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "sidebar main";
+    grid-gap: 30px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #1d2132;
+}
+
+.main {
+    grid-area: main;
+}
+
+/* sidebar */
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 10px;
 }

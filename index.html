@@ -10,44 +10,46 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <!-- header -->
-    <div class="header-area">
-        <div class="wrapper">
-            <nav class="menu">
-                <ul>
-                    <li><button id="prev">Prev</button></li>
-                    <li><button id="next">Next</button></li>
-                    <li>
-                        <select name="" id="select-heading-font" onchange="selectFont('select-heading-font')">
-                            <option value="">Select Heading Font</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select name="" id="select-text-font" onclick="selectFont('select-text-font')">
-                            <option value="">Select Text Font</option>
-                        </select>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <!-- font section -->
     <div class="font-area bg font-area-bg">
-        <div class="wrapper">
-            <div class="font-inner">
-                <div class="slide-number">1</div>
-                <div class="content-box">
-                    <h1 class="h-font h-font-size">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
-                    <p class="t-font t-font-size">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita distinctio, velit commodi ducimus sit officia quaerat dicta soluta reprehenderit architecto.</p>
+        <div class="wrapper layout">
+            <aside class="sidebar">
+                
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <button id="prev">Prev</button>
+                            <button id="next">Next</button>
+                        </li>
+                        <li>
+                            <select name="" id="select-heading-font" onchange="selectFont('select-heading-font')">
+                                <option value="">Select Heading Font</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" id="select-text-font" onclick="selectFont('select-text-font')">
+                                <option value="">Select Text Font</option>
+                            </select>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="main">
+                
+                <div class="font-inner">
+                    <div class="slide-number">1</div>
+                    <div class="content-box">
+                        <h1 class="h-font h-font-size">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
+                        <p class="t-font t-font-size">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita distinctio, velit commodi ducimus sit officia quaerat dicta soluta reprehenderit architecto.</p>
+                    </div>
+                    <div class="font-info">
+                        <p><span class="heading-font">Abril Fatface</span> + <span class="text-font">Lato</span></p>
+                    </div>
+                    <div class="font-get">
+                        <button class="download">Download Font Pair</button>
+                        <button class="copy-code">Copy the code</button>
+                    </div>
                 </div>
-                <div class="font-info">
-                    <p><span class="heading-font">Abril Fatface</span> + <span class="text-font">Lato</span></p>
-                </div>
-                <div class="font-get">
-                    <button class="download">Download Font Pair</button>
-                    <button class="copy-code">Copy the code</button>
-                </div>
-            </div>
+            </main>
         </div>
     </div>
 
