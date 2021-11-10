@@ -11,7 +11,15 @@ const tFontName = document.querySelector('.text-font');
 
 const contentBox = document.querySelector('.content-box');
 
-const fontDownCopyBtn = document.querySelectorAll('.btn-bg')
+const fontDownCopyBtn = document.querySelectorAll('.btn-bg');
+
+const hfontLink = document.querySelector('.hfont-link');
+const hfontFamily = document.querySelector('.hfont-family');
+const tfontLink = document.querySelector('.tfont-link');
+const tfontFamily = document.querySelector('.tfont-family');
+
+// const fontLink = document.querySelector('#font-link')
+// const fontFamily = document.querySelector('#font-family')
 
 // GET FONTS PAIR
 const fonts = [];
@@ -101,16 +109,20 @@ const selectFont = (elementId) => {
     if (elementId === 'select-heading-font') {
         hFont.style.fontFamily = `'${selectedFont}',sans-serif`;
         hFontName.innerText = selectedFont;
+        hfontLink.innerText = selectedFont;
+        hfontFamily.innerText = selectedFont;
     }
     if (elementId === 'select-text-font') {
         tFont.style.fontFamily = `'${selectedFont}',sans-serif`;
         tFontName.innerText = selectedFont;
+        tfontLink.innerText = selectedFont;
+        tfontFamily.innerText = selectedFont;
     }
 }
 
 
 // ADD FONT
-const addFont = (i, value) => {
+const addFont = (i) => {
     slideNumber.innerText = i + 1;
 
     const hfont = fonts[i].hfont;
@@ -121,6 +133,22 @@ const addFont = (i, value) => {
 
     hFontName.innerText = hfont;
     tFontName.innerText = tfont;
+
+    const copyHfont = hfont.split(' ').join('+');
+    const copyTfont = tfont.split(' ').join('+');
+
+    hfontLink.innerText = copyHfont;
+    hfontFamily.innerText = hfont;
+    tfontLink.innerText = copyTfont;
+    tfontFamily.innerText = tfont;
+
+
+    // fontLink.innerText = '<' + `link href="https://fonts.googleapis.com/css2?family=${copyHfont}|${copyTfont}" rel="stylesheet"` + '>';
+
+    // fontFamily.innerText = `
+    // font-family: '${hfont}', Sans-Serif;
+
+    // font-family: '${tfont}', Sans-Serif;`
 }
 
 
@@ -139,3 +167,30 @@ const selectColor = (id) => {
     }
 }
 
+// open modal
+const copyCodeBtn = document.getElementById('copy-code');
+const closeBtn = document.querySelector('.close');
+const codeModal = document.querySelector('.code-modal');
+
+const openModal = () => {
+    codeModal.style.display = 'block';
+}
+
+closeBtn.onclick = function () {
+    codeModal.style.display = 'none';
+}
+
+// copy code 
+const copyCode = (id) => {
+    if (id === 'copyLink') {
+        const copyLink = document.getElementById('copy-link');
+        navigator.clipboard.writeText(copyLink.innerText);
+        document.getElementById('copyLink').innerText = 'copied';
+    }
+
+    if (id === 'copyFamily') {
+        const copyFamily = document.getElementById('copy-family');
+        navigator.clipboard.writeText(copyFamily.innerText);
+        document.getElementById('copyFamily').innerText = 'copied';
+    }
+}
